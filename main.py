@@ -24,19 +24,19 @@ goal = WikiPage('https://en.wikipedia.org/wiki/Artificial_intelligence')
 
 # YOUR SEARCH ALGORITHM CODE HERE
 
-def breadth_first_search(problem):
-    if problem.is_goal(problem.initial):
-        return problem.initial
+def breadth_first_search(start,goal):
+    if start == goal:
+        return start
     
     frontier = deque()
-    frontier.append(problem.initial) 
-    reached = {problem.initial}
+    frontier.append(start) 
+    reached = {start}
 
-    while frontier():
+    while frontier:
         state = frontier.popleft()
 
         for child in expand(state):
-            if problem.is_goal(child):
+            if child == goal:
                 return child
             if child not in reached:
                 reached.add(child)
