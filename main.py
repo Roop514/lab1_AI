@@ -1,9 +1,10 @@
 """
-Your name(s): 
+Your name(s): Rupinder Kaur
 """
 
 
 from nodes import WikiPage
+from collections import deque
 
 # change the start and destination pages as you like - see if your algorithm can find a route between them
 start = WikiPage('https://en.wikipedia.org/wiki/Mount_Royal_University')
