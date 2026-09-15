@@ -22,6 +22,27 @@ goal = WikiPage('https://en.wikipedia.org/wiki/Artificial_intelligence')
 
 
 # YOUR SEARCH ALGORITHM CODE HERE
+
+def breadth_first_search(problem):
+    if problem.is_goal(problem.initial):
+        return problem.initial
+    
+    frontier = deque()
+    frontier.append(problem.initial) 
+    reached = {problem.initial}
+
+    while frontier():
+        state = frontier.popleft()
+
+        for child in expand(state):
+            if problem.is_goal(child):
+                return child
+            if child not in reached:
+                reached.add(child)
+                frontier.append(child)
+    
+    return failure
+  
 # (print the discovered route when you find it)
 
 
