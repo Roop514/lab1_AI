@@ -11,6 +11,8 @@ start = WikiPage('https://en.wikipedia.org/wiki/Mount_Royal_University')
 goal = WikiPage('https://en.wikipedia.org/wiki/Artificial_intelligence')
 
 
+result = breadth_first_search(start, goal)
+print(result)
 
 # What search algorithm are you using? Why?
 # (your response here)
@@ -42,7 +44,7 @@ def breadth_first_search(start,goal):
                 reached.add(child)
                 frontier.append(child)
     
-    return failure
+    return None
   
 # (print the discovered route when you find it)
 
