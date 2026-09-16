@@ -46,7 +46,14 @@ def breadth_first_search(start,goal):
     return None
 
 result = breadth_first_search(start, goal)
-print(result)
+
+if result is not None:
+    route = result.get_ancestors()
+    print(f"Route found ({len(route) -1} links):")
+    for page in route:
+        print(" ", page)
+else:
+    print("No route found.")
 
 # (print the discovered route when you find it)
 
