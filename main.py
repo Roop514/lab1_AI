@@ -12,7 +12,9 @@ goal = WikiPage('https://en.wikipedia.org/wiki/Artificial_intelligence')
 
 
 # What search algorithm are you using? Why?
-# (your response here)
+# We are using the breadth first search algorithm because it explores
+# pages level by level and finds the shortest path from the starting
+# page to goal page
 
 
 
