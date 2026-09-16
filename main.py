@@ -19,7 +19,11 @@ goal = WikiPage('https://en.wikipedia.org/wiki/Artificial_intelligence')
 
 
 # Does your code work? (Verify the route found by your search algorithm)
-
+# Yes, running the search from Mount_Royal_University to
+# Artificial_intelligence found the shortest route, which has 2 links:
+# Mount_Royal_University -> University_of_Alberta -> Artificial_intelligence
+# We manually verified this route by checking both pages on Wikipedia and
+# confirming each contains a real hyperlink to the next page in the route.
 
 
 
