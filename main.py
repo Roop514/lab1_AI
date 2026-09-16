@@ -19,7 +19,11 @@ goal = WikiPage('https://en.wikipedia.org/wiki/Artificial_intelligence')
 
 
 # Does your code work? (Verify the route found by your search algorithm)
-
+# Yes, running the search from Mount_Royal_University to
+# Artificial_intelligence found the shortest route, which has 2 links:
+# Mount_Royal_University -> University_of_Alberta -> Artificial_intelligence
+# We manually verified this route by checking both pages on Wikipedia and
+# confirming each contains a real hyperlink to the next page in the route.
 
 
 
@@ -62,3 +66,13 @@ else:
 
 # Can you think of a search approach that could be faster than your implementation above?
 # Describe it.
+#
+# Bidirectional BFS.
+# Instead of only searching forward from the start page, we could search
+# from both ends at the same time. So while we're expanding pages
+# forward from Mount_Royal_University like we already do, we'd also run
+# a second search backward from Artificial_intelligence, using pages
+# that link TO it instead of pages it links to. We'd go back and forth
+# expanding a bit from each side until the two searches bump into each
+# other on some page. Once that happens we know we found a connection,
+# and we can stitch the two halves together to get the full path.
